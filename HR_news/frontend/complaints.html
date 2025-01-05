@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Elzay News</title>
+  <link rel="icon" href="./css/el-zay-01-1.png" type="image/png">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-container">
+      <img src="./css/el-zay-01-1.png" alt="Company Logo" class="logo">
+      <nav class="navigation">
+        <h1 id="header-title">Elzay News</h1>
+      </nav>
+      <div class="language-dropdown">
+        <select id="language" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="bn">Bengali</option>
+          <option value="hi">Hindi</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="main-content">
+    <section class="card">
+      <div class="card-body">
+        <h2 id="breaking-news-title">Breaking News Headline</h2>
+        <p id="breaking-news-summary">A summary of the news article to entice the reader.</p>
+        <a href="#" class="read-more" id="read-more-link">Read more</a>
+      </div>
+    </section>
+  </main>
+  
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p id="footer-text">&copy; 2025 Your Company. All rights reserved.</p>
+  </footer>
+
+  <script src="./js/lang.js"></script>
+  <script src="./js/script.js"></script>
+  <script>
+    const translations = {
+      en: {
+        "page-title": "Elzay News",
+        "header-title": "Elzay News",
+        "breaking-news-title": "Breaking News Headline",
+        "breaking-news-summary": "A summary of the news article to entice the reader.",
+        "read-more-link": "Read more",
+        "footer-text": "&copy; 2025 Your Company. All rights reserved."
+      },
+      ar: {
+        "page-title": "إلزاى نيوز",
+        "header-title": "إلزاى نيوز",
+        "breaking-news-title": "عنوان الأخبار العاجلة",
+        "breaking-news-summary": "ملخص للمقال لجذب القارئ.",
+        "read-more-link": "اقرأ المزيد",
+        "footer-text": "&copy; 2025 شركتك. جميع الحقوق محفوظة."
+      },
+      bn: {
+        "page-title": "এলজে নিউজ",
+        "header-title": "এলজে নিউজ",
+        "breaking-news-title": "ব্রেকিং নিউজ হেডলাইন",
+        "breaking-news-summary": "পাঠকদের আকৃষ্ট করার জন্য সংবাদ নিবন্ধের সারাংশ।",
+        "read-more-link": "আরও পড়ুন",
+        "footer-text": "&copy; 2025 আপনার কোম্পানি। সমস্ত অধিকার সংরক্ষিত।"
+      },
+      hi: {
+        "page-title": "एलज़े न्यूज़",
+        "header-title": "एलज़े न्यूज़",
+        "breaking-news-title": "ब्रेकिंग न्यूज हेडलाइन",
+        "breaking-news-summary": "पाठकों को आकर्षित करने के लिए समाचार लेख का सारांश।",
+        "read-more-link": "अधिक पढ़ें",
+        "footer-text": "&copy; 2025 आपकी कंपनी। सर्वाधिकार सुरक्षित।"
+      }
+    };
+
+    function changeLanguage() {
+      const selectedLanguage = document.getElementById("language").value;
+      const translation = translations[selectedLanguage];
+
+      document.getElementById("page-title").textContent = translation["page-title"];
+      document.getElementById("header-title").textContent = translation["header-title"];
+      document.getElementById("breaking-news-title").textContent = translation["breaking-news-title"];
+      document.getElementById("breaking-news-summary").textContent = translation["breaking-news-summary"];
+      document.getElementById("read-more-link").textContent = translation["read-more-link"];
+      document.getElementById("footer-text").innerHTML = translation["footer-text"];
+    }
+  </script>
+</body>
+</html>

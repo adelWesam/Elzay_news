@@ -1,0 +1,122 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('./elzay.jpg') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Ensure the image covers the screen */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  padding: 20px 0;
+  color: #333;
+}
+
+/* Header Styling */
+.header {
+  background: linear-gradient(135deg, #007BFF 0%, #00BFFF 100%); /* Blue gradient */
+  color: #fff;
+  padding: 20px 0;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Floating Animation for 'Elzay News' */
+.navigation h1 {
+  font-size: 36px;
+  background: linear-gradient(#dce7f3, #dce7f3, #627379);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Language Dropdown Styling */
+.language-dropdown select {
+  background: #fff;
+  color: #007BFF; /* Blue text */
+  border: 1px solid #007BFF;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Main Content Section */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Take remaining space */
+  text-align: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9); /* Soft white with slight transparency */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.card-body h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  color: #007BFF; /* Blue link */
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styling */
+.footer {
+  background: linear-gradient(135deg, #007BFF 0%, #00BFFF 100%); /* Blue gradient */
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}

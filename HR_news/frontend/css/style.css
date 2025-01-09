@@ -111,6 +111,37 @@ body {
   text-decoration: underline;
 }
 
+/* Static Image Styling */
+.static-image {
+  display: block; /* Ensures the image behaves predictably */
+  margin: 20px auto; /* Centers the image */
+  width: 100%; /* Full width by default */
+  max-width: 300px; /* Limits the maximum width */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+}
+
+/* When the image is placed inside the main content card */
+.card .static-image {
+  max-width: 80%; /* Slightly larger for card placement */
+  margin-top: 15px; /* Adds space above */
+  margin-bottom: 15px; /* Adds space below */
+}
+
+/* When the image is placed in the header */
+.header .static-image {
+  max-width: 50px; /* Smaller size for header images */
+  height: 50px; /* Fixed height for uniformity */
+}
+
+/* When the image is placed in the footer */
+.footer .static-image {
+  max-width: 80px; /* Slightly larger for footer placement */
+  height: auto; /* Maintains aspect ratio */
+  margin-top: 10px; /* Adds space above */
+}
+
 /* Footer Styling */
 .footer {
   background: linear-gradient(135deg, #007BFF 0%, #00BFFF 100%); /* Blue gradient */

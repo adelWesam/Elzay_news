@@ -22,7 +22,7 @@ body {
 .header {
   background: linear-gradient(135deg, #007BFF 0%, #00BFFF 100%); /* Blue gradient */
   color: #fff;
-  padding: 20px 0;
+  padding: 0px 0;
   position: relative;
 }
 
